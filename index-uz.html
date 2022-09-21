@@ -69,7 +69,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slide">
-                            <video src="./daydi.mp4" class="swiper__slide-video" autoplay muted loop></video>
+                            <video src="./daydi.mp4" preload="none" id="vid2" class="swiper__slide-video" autoplay muted loop></video>
                             <div class="swiper__slide-text">
                                 <p class="swiper__slide-type">MILLIY SERIAL</p>
                                 <h1 class="swiper__slide-name">DAYDI QIZNING DAFTARI</h1>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slide">
-                            <video src="./qil.mp4" class="swiper__slide-video" autoplay muted loop></video>
+                            <video src="./qil.mp4" id="vid3" preload="none" class="swiper__slide-video" autoplay muted loop></video>
                             <div class="swiper__slide-text">
                                 <p class="swiper__slide-type">MILLIY SERIAL</p>
                                 <h1 class="swiper__slide-name">QIL USTIDAGI TAQDIR</h1>
@@ -307,36 +307,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
     <script>
-        document.getElementById('vid1').addEventListener('loadedmetadata', function () {
-            this.currentTime = 10;
-        }, true);
-        AOS.init();
-        var swiper = new Swiper(".mySwiper", {
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            autoplay: {
-                delay: 5000,
-            }
-        });
-        var swiper2 = new Swiper(".mySwiper2", {
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            autoplay: {
-                delay: 5000,
-                transition: 1000,
-                duration: 1000,
-            },
-            spaceBetween: 50,
-            initialSlide: 1,
-            loop: true,
-        });
-        let lang = document.querySelector('.lang-item')
-        let list = document.querySelector('.header__list')
-        lang.addEventListener('click', () => {
-            lang.classList.toggle('active')
-        })
+
+        
     </script>
 </body>
 

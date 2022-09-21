@@ -222,6 +222,7 @@ ul {
 
 .done {
     overflow: hidden;
+
     & .container {
         padding-left: 6;
     }
@@ -269,6 +270,7 @@ ul {
             cursor: pointer;
             opacity: 0.3;
             transform: scale(0.9) !important;
+
             // transition: .3s;
             & img {
                 width: 100%;
@@ -434,4 +436,19 @@ ul {
     margin-top: -.1rem;
 }
 
-@import './media.scss'
+@import './media.scss';
+
+
+
+
+// .mySwiper {
+//     & .swiper {
+//         &-slide {
+//             &-active {
+//                 & video {
+                    
+//                 }
+//             }
+//         }
+//     }
+// }
