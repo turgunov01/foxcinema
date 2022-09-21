@@ -6,18 +6,30 @@ video.currentTime = 10
 var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: ".swiper-pagination",
+        clickable: true,
     },
+    loop: true,
     on: {
         transitionStart: function () {
             var videos = document.querySelectorAll('video');
-            var video = document.querySelector('#vid1')
-            var video2 = document.querySelector('#vid2')
-            var video3 = document.querySelector('#vid3')
-            video.currentTime = 10
-            video2.currentTime = 1
-            video3.currentTime = 5
+            // var video = document.querySelector('#vid1')
+            // var video2 = document.querySelector('#vid2')
+            // var video3 = document.querySelector('#vid3')
+            // video.currentTime = 10
+            // video2.currentTime = 1
+            // video3.currentTime = 5
+
 
             Array.prototype.forEach.call(videos, function (video) {
+                if (video.classList.contains('swiper__video-inner')) {
+                    video.currentTime = 10
+                } else if (video.classList.contains('swiper__video-inner-2')) {
+                    video.currentTime = 1
+                } else if (video.classList.contains('swiper__video-inner-3')) {
+                    video.currentTime = 5
+                } else {
+                    video.currentTime = 0
+                }
                 video.pause()
             });
         },
