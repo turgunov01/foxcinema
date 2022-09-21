@@ -27,8 +27,11 @@ var swiper = new Swiper(".mySwiper", {
             var activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
             var activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
             activeSlideVideo.play();
+            activeSlideVideo.addEventListener('ended', function () {
+                // swiper.slideNext()
+                swiper.slideNext()
+            })
         },
-
     },
 })
 
