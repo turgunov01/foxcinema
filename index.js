@@ -67,24 +67,14 @@ lang.addEventListener('click', () => {
 
 
 
-
-
-var xhr = new XMLHttpRequest()
-xhr.open(
-    'GET',
-    'https://turgunov01.github.io/foxcinema/',
-    true
-)
-xhr.send()
-
-xhr.onreadystatechange = function () {
-    if (xhr.readyState != 4) {
-        return
-    }
-
-    if (xhr.status === 200) {
-        console.log('result', xhr.responseText)
-    } else {
-        console.log('err', xhr.responseText)
-    }
+const userAction = async () => {
+    const response = await fetch('http://example.com/movies.json', {
+        method: 'POST',
+        body: myBody, // string or object
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const myJson = await response.json();
+    console.log(response) //extract JSON from the http response
 }
