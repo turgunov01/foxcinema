@@ -64,3 +64,27 @@ let lang = document.querySelector('.lang-item')
 lang.addEventListener('click', () => {
     lang.classList.toggle('active')
 })
+
+
+
+
+
+var xhr = new XMLHttpRequest()
+xhr.open(
+    'GET',
+    'https://turgunov01.github.io/foxcinema/',
+    true
+)
+xhr.send()
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState != 4) {
+        return
+    }
+
+    if (xhr.status === 200) {
+        console.log('result', xhr.responseText)
+    } else {
+        console.log('err', xhr.responseText)
+    }
+}
