@@ -8,7 +8,15 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
-    loop: false,
+    breakpoints: {
+        0: {
+            loop: false,
+        },
+        1024: {
+            loop: true,
+        }
+    },
+    if(activSlideIndex){},
     on: {
         transitionStart: function () {
             var videos = document.querySelectorAll('video');
@@ -21,7 +29,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
             Array.prototype.forEach.call(videos, function (video) {
-                video.mute = true
+                video.muted = true
                 if (video.classList.contains('swiper__video-inner')) {
                     video.currentTime = 10
                 } else if (video.classList.contains('swiper__video-inner-2')) {
@@ -35,7 +43,7 @@ var swiper = new Swiper(".mySwiper", {
             });
         },
 
-        transitionEnd: function () {
+        slideChangeTransitionEnd: function () {
             var activeIndex = this.activeIndex;
             var activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
             var activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
@@ -45,6 +53,7 @@ var swiper = new Swiper(".mySwiper", {
                 // swiper.slideNext()
                 swiper.slideNext()
             })
+            // if(slideIndex)
         },
     },
 })
