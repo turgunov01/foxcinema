@@ -561,8 +561,8 @@ ul {
 
 @media (max-width: 475px) {
     .mySwiper .swiper__slide-name {
-        font-size: 5rem;
-        line-height: 6rem
+        font-size: 4rem;
+        line-height: 5rem
     }
 
     .mySwiper .swiper__slide-button {

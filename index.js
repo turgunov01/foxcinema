@@ -8,7 +8,7 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
-    loop: true,
+    loop: false,
     on: {
         transitionStart: function () {
             var videos = document.querySelectorAll('video');
@@ -21,6 +21,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
             Array.prototype.forEach.call(videos, function (video) {
+                video.mute = true
                 if (video.classList.contains('swiper__video-inner')) {
                     video.currentTime = 10
                 } else if (video.classList.contains('swiper__video-inner-2')) {
@@ -39,6 +40,7 @@ var swiper = new Swiper(".mySwiper", {
             var activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
             var activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
             activeSlideVideo.play();
+            // activeSlideVideo.muted();
             activeSlideVideo.addEventListener('ended', function () {
                 // swiper.slideNext()
                 swiper.slideNext()
