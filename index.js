@@ -68,24 +68,24 @@ lang.addEventListener('click', () => {
 })
 
 
-const work = async () => {
-    let response = await fetch('/article/fetch/logo-fetch.svg');
+// const work = async () => {
+//     let response = await fetch('/article/fetch/logo-fetch.svg');
 
-    let blob = await response.blob(); // скачиваем как Blob-объект
+//     let blob = await response.blob(); // скачиваем как Blob-объект
 
-    // создаём <img>
-    let img = document.createElement('img');
-    img.style = 'position:fixed;top:10px;left:10px;width:100px';
-    document.body.append(img);
-    img.src = './assets/img/movies/1.svg'
+//     // создаём <img>
+//     let img = document.createElement('img');
+//     img.style = 'position:fixed;top:10px;left:10px;width:100px';
+//     document.body.append(img);
+//     img.src = './assets/img/movies/1.svg'
 
-    // выводим на экран
-    img.src = URL.createObjectURL(blob);
+//     // выводим на экран
+//     img.src = URL.createObjectURL(blob);
 
-    setTimeout(() => {
-        img.remove();
-        URL.revokeObjectURL(img.src);
-    }, 3000);
-}
+//     setTimeout(() => {
+//         img.remove();
+//         URL.revokeObjectURL(img.src);
+//     }, 3000);
+// }
 
-work()
+// work()
