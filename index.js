@@ -16,7 +16,7 @@ var swiper = new Swiper(".mySwiper", {
             loop: true,
         }
     },
-    if(activSlideIndex){},
+    // if(activSlideIndex){},
     on: {
         transitionStart: function () {
             var videos = document.querySelectorAll('video');
@@ -53,7 +53,6 @@ var swiper = new Swiper(".mySwiper", {
                 // swiper.slideNext()
                 swiper.slideNext()
             })
-            // if(slideIndex)
         },
     },
 })
