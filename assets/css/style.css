@@ -104,7 +104,31 @@ ul {
     background: white !important;
     border-radius: 0 !important;
     width: 20px !important;
-    height: 2px !important
+    height: 2px !important;
+    position: relative;
+    cursor: pointer;
+}
+
+.mySwiper .swiper-pagination-bullet::after {
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    cursor: pointer !important;
+}
+
+.mySwiper .swiper-pagination-bullet::before {
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    cursor: pointer !important;
 }
 
 .mySwiper .swiper-slide-active {
@@ -481,15 +505,15 @@ ul {
     }
 
     .mySwiper .swiper-slide:nth-of-type(1) {
-        background: url("../img/header__background.png") no-repeat center center/cover
+        background: url("../img/header__background3.png") no-repeat center right /cover
     }
 
     .mySwiper .swiper-slide:nth-of-type(2) {
-        background: url("../img/header__background3.png") no-repeat center right/cover
+        background: url("../img/header__background2.png") no-repeat center center/cover
     }
 
     .mySwiper .swiper-slide:nth-of-type(3) {
-        background: url("../img/header__background2.png") no-repeat center center/cover
+        background: url("../img/header__background.png") no-repeat center center/cover
     }
 
     .mySwiper .swiper-slide video {
