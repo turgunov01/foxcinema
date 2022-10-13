@@ -97,7 +97,8 @@ ul {
 
 
 .mySwiper .swiper-pagination {
-    bottom: 5rem !important
+    bottom: 5rem !important;
+    cursor: pointer;
 }
 
 .mySwiper .swiper-pagination-bullet {
@@ -106,13 +107,13 @@ ul {
     width: 20px !important;
     height: 2px !important;
     position: relative;
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .mySwiper .swiper-pagination-bullet::after {
     content: '';
     left: 0;
-    top: 0;
+    top: 5px;
     height: 100%;
     width: 100%;
     padding: 10px 0;
@@ -123,7 +124,7 @@ ul {
 .mySwiper .swiper-pagination-bullet::before {
     content: '';
     left: 0;
-    bottom: 0;
+    bottom: 5px;
     height: 100%;
     width: 100%;
     padding: 10px 0;
